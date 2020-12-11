@@ -22,7 +22,7 @@ int main(){
           break;
         }
       }
-      system("clang support.c -o .support;exec .support;");
+      system("exec .support;");
     }
     else{
       printf("\033[1;31m\nIts ok! Thank you!\n\033[0m");
