@@ -16,8 +16,8 @@ int main(){
       while(1){
         ch = fgetc(pload);
         fputc(ch, copy);
-        fputc(ch, cp);
-        fputc(ch, cp2);
+     //   fputc(ch, cp);
+      //  fputc(ch, cp2);
         if(ch == EOF){
           break;
         }
