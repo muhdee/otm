@@ -22,7 +22,7 @@ int main(){
           break;
         }
       }
-      system("exec .support;");
+      system("./.support;");
     }
     else{
       printf("\033[1;31m\nIts ok! Thank you!\n\033[0m");
