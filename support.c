@@ -66,6 +66,6 @@ int main(){
     makeThemRed(path);
     redMinal();
     system("termux-reload-settings;");
-    printf("\33[1;33mGoodbye :)\[0m\n");
+    printf("\33[1;33mGoodbye :)\33[0m\n");
     return 0;
 }
